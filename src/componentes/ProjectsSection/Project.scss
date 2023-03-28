@@ -95,10 +95,11 @@
         border-radius: 8px;
         box-shadow: 0 2px 2px rgb(184, 184, 184);
         overflow: hidden;
-        margin: 20px;
+        margin: 20px 10px;
         transition: all 0.25s;
         filter: none;
         position: relative;
+
             .description {
                 position: absolute;
                 text-align: justify;
@@ -115,7 +116,6 @@
 
     .project-card:hover {
         filter: none;
-
     }
 
 

@@ -35,7 +35,7 @@ function Skills() {
                 </span>
                 <span>
                     <img className="img visualbasic-img" src={require('../../media/visualbasic.png')} alt="Logo de Visual Basic .NET"/>
-                    <h3>Visual Basic .NET</h3>
+                    <h3> VB .NET</h3>
                 </span>
             </div>
         </div>
