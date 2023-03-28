@@ -1,0 +1,262 @@
+#skills-section {
+    height: 900px;
+    background-color: #282828;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='199' viewBox='0 0 100 199'%3E%3Cg fill='%23979797' fill-opacity='0.02'%3E%3Cpath d='M0 199V0h1v1.99L100 199h-1.12L1 4.22V199H0zM100 2h-.12l-1-2H100v2z'%3E%3C/path%3E%3C/g%3E%3C/svg%3E");
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.skills-logos{
+    opacity: 1;
+    width: 90vw;
+    height: 300px;
+    padding: 50px; 
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    box-shadow: 1px 1px 10px rgb(90, 90, 90);
+    border-radius: 5px;
+    transition: 0.5s;
+    animation: scale-in-ver-top 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+.logo-img {
+    max-width: 90px;
+}
+
+.skill-button-div {
+    margin: 10px;
+}
+
+
+.skills-container {
+    width: 100%;
+    padding: 50px;
+    font-size: 3vw;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: -205px;
+}
+
+.skills-container-title {
+    margin-bottom: 30px;
+    height: 50px;
+    line-height: 100px;
+    text-align: center;
+    color: white; 
+    font-size: 3em; 
+    text-shadow: -1px 0 black, 0 5px black, 1px 0 black, 0 -1px black;
+}
+
+.skills-container-p {
+    color: white; 
+    font-size: 20px; 
+    text-shadow: -1px 0 black, 0 5px black, 1px 0 black, 0 -1px black;
+    margin-bottom: 30px;
+}
+
+
+.skill-button{
+    color: black;
+    background: white;
+    padding: 20px;
+    border: 1px solid #282828;
+    transition: .2s all;
+    cursor: pointer;
+    animation: shake 1s;
+    animation-iteration-count: infinite;
+    transform: translate3d(0, 0, 0);
+    backface-visibility: hidden;
+    perspective: 1000px;
+    transition: 0.5s;
+    box-shadow: none;
+}
+
+
+.skill-button:hover{
+    color: white;
+    background: rgb(221, 178, 38);
+}
+
+.hvr-shutter-in-horizontal {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    position: relative;
+    background: #ddb226;
+    -webkit-transition-property: color;
+    transition-property: color;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    box-shadow: 5px 5px 0px 0px #4e4e4e;
+  }
+  .hvr-shutter-in-horizontal:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #e1e1e1;
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+    -webkit-transform-origin: 50%;
+    transform-origin: 50%;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+  }
+  .hvr-shutter-in-horizontal:hover, .hvr-shutter-in-horizontal:focus, .hvr-shutter-in-horizontal:active {
+    color: white;
+  }
+  .hvr-shutter-in-horizontal:hover:before, .hvr-shutter-in-horizontal:focus:before, .hvr-shutter-in-horizontal:active:before {
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+  }
+
+  .invisible {
+    display: none;
+  }
+  
+
+  @media (max-width: 956px) {
+ 
+    /* SKILLS */
+    #skills-section {
+        height: 900px;
+        background-color: #282828;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='199' viewBox='0 0 100 199'%3E%3Cg fill='%23979797' fill-opacity='0.02'%3E%3Cpath d='M0 199V0h1v1.99L100 199h-1.12L1 4.22V199H0zM100 2h-.12l-1-2H100v2z'%3E%3C/path%3E%3C/g%3E%3C/svg%3E");
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .skills-container-title {
+        margin: 0;
+        height: 0px;
+        text-align: center;
+        color: white; 
+        font-size: 2.2em; 
+        text-shadow: -1px 0 black, 0 5px black, 1px 0 black, 0 -1px black
+    }
+    
+    .skills-container-p {
+        width: 60%;
+        text-align: center;
+        margin-top: 5px;
+    }
+
+    .skills-logos{
+        width: 80vw;  
+        padding: 20px; 
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+        text-align: center;
+        box-shadow: 1px 1px 10px rgb(90, 90, 90);
+        border-radius: 5px;
+    }
+    
+    .logo-img {
+        max-width: 90px;
+    }
+    
+    .skill-button-div {
+        margin: 10px;
+    }
+    
+    
+    .skills-container {
+        width: 100%;
+        padding: 100px;
+        font-size: 5vw;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .skill-button{
+        color: black;
+        background: white;
+        padding: 20px;
+        border: 1px solid #282828;
+        transition: .2s all;
+        cursor: pointer;
+        animation: shake 1s;
+        animation-iteration-count: infinite;
+        transform: translate3d(0, 0, 0);
+        backface-visibility: hidden;
+        perspective: 1000px;
+        transition: 0.5s;
+        box-shadow: none;
+    }
+    
+    
+    .skill-button:hover{
+        color: white;
+        background: rgb(221, 178, 38);
+    }
+    
+    .hvr-shutter-in-horizontal {
+        display: inline-block;
+        vertical-align: middle;
+        -webkit-transform: perspective(1px) translateZ(0);
+        transform: perspective(1px) translateZ(0);
+        box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+        position: relative;
+        background: #ddb226;
+        -webkit-transition-property: color;
+        transition-property: color;
+        -webkit-transition-duration: 0.3s;
+        transition-duration: 0.3s;
+        box-shadow: 5px 5px 0px 0px #4e4e4e;
+      }
+      .hvr-shutter-in-horizontal:before {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: #e1e1e1;
+        -webkit-transform: scaleX(1);
+        transform: scaleX(1);
+        -webkit-transform-origin: 50%;
+        transform-origin: 50%;
+        -webkit-transition-property: transform;
+        transition-property: transform;
+        -webkit-transition-duration: 0.3s;
+        transition-duration: 0.3s;
+        -webkit-transition-timing-function: ease-out;
+        transition-timing-function: ease-out;
+      }
+      .hvr-shutter-in-horizontal:hover, .hvr-shutter-in-horizontal:focus, .hvr-shutter-in-horizontal:active {
+        color: white;
+      }
+      .hvr-shutter-in-horizontal:hover:before, .hvr-shutter-in-horizontal:focus:before, .hvr-shutter-in-horizontal:active:before {
+        -webkit-transform: scaleX(0);
+        transform: scaleX(0);
+      }
+      
+    
+}

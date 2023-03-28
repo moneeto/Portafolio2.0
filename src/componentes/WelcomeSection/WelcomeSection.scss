@@ -1,0 +1,359 @@
+
+#welcome-section {
+    width: 100%;
+    height: 900px;
+    background-color: #171717;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='199' viewBox='0 0 100 199'%3E%3Cg fill='%23979797' fill-opacity='0.02'%3E%3Cpath d='M0 199V0h1v1.99L100 199h-1.12L1 4.22V199H0zM100 2h-.12l-1-2H100v2z'%3E%3C/path%3E%3C/g%3E%3C/svg%3E");
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.texto-principal-profesion{
+    text-align: center;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    user-select: none;
+}
+
+.frontend-text {
+    animation-name: desplazamiento-frontend;
+    animation-duration: 6s;
+    animation-fill-mode: forwards;
+}
+
+.developer-text {
+    animation-name: desplazamiento-developer;
+    animation-duration: 6s;
+    animation-fill-mode: forwards;
+}
+
+.front-end-developer-text {
+    font-size: 15vw;
+    font-family: 'Abril Fatface', sans-serif;
+    color: rgb(151, 151, 151);
+    transition: 0.5s;    /* ----------->Esto es para ser mas visible el diseño responsivo */
+    user-select: none;
+}
+
+.front-end-developer-text:hover {
+    font-size: 15vw;
+    color: white;
+    transition: 1s;
+    cursor: default;
+}
+
+.texto-principal-presentacion {
+    text-align: center;
+    display: none;
+    align-items: center;
+    flex-direction: row;
+    max-width: 100%;
+    height: 500px;
+    font-family: Poppins, sans-serif;
+    transition: 0.5s;
+}
+
+.tppFlex {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.tppFotoFlex {
+    width: 95%;
+    display: flex;
+    flex-direction: row;
+}
+
+
+.nombreText {
+    color: rgb(214, 214, 214);
+    font-size: 6vw;
+    animation: blow-presentacion 1s;
+    transition: 0.5s;
+    text-shadow: -1px 0 black, 0 5px black, 1px 0 black, 0 -1px black;
+}
+
+.profesionText {
+    color: #ffc4009f;
+    font-weight: 100;
+    font-size: 2em;
+    animation: reveal ease-in-out forwards;
+}
+
+.descripcionText {
+    color: rgb(214, 214, 214);
+    font-size: 1.3em;
+    max-width: 70%;
+    animation: blow-presentacion 1s 1s both;
+}
+
+.box {
+    position: relative;
+}
+
+.box .content {
+    opacity: 1;
+    width: 356px;
+    height: 400px;
+    /*transform: scaleX(0);*/
+    transform-origin: left;
+    animation: reveal 1s ease-in-out forwards;
+}
+
+.box .content:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #ddb226;
+    z-index: 1;
+    animation: reveal 1s reverse forwards;
+    animation-delay: 1s;
+    transform-origin: right;
+}
+
+.box .content img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background-color:#171717;
+}
+
+
+.box-1 {
+    position: relative;
+}
+
+.box-1 .content-1 {
+    opacity: 1;
+    width: 100%;
+    height: auto;
+    /*transform: scaleX(0);*/
+    transform-origin: left;
+    animation: reveal 1s ease-in forwards;
+}
+
+.box-1 .content-1:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(221, 178, 38);
+    z-index: 1;
+    animation: reveal 1s reverse forwards;
+    animation-delay: 1s;
+    transform-origin: right;
+}
+
+.box-1 .content-1 .profesionText {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+  }
+@keyframes desplazamiento-nav {
+    0% {
+        transform: translateY(-200px);
+    }
+    /* 50% {
+        transform: translateY(20px);
+    } */
+    100% {
+        transform: translateY(0px);
+    }
+}
+@keyframes desplazamiento-frontend{
+    0% {
+        transform: translateX(-2000px);
+    }
+    25%{
+        transform: translateX(0px);
+    }
+    50%{
+        transform: translateX(0px);
+    }
+    100% {
+        transform: translateX(2000px);
+    }
+}
+@keyframes desplazamiento-developer{
+    0% {
+        transform: translateX(2000px);
+    }
+    25%{
+        transform: translateX(0px);
+    }
+    50%{
+        transform: translateX(0px);
+    }
+    100% {
+        transform: translateX(-2000px);
+    }
+}
+@keyframes blow-presentacion{
+    0%{
+        opacity: 0;
+        transform: scale(0);
+    }
+    33%{
+        opacity: 0.2;
+    }
+    66%{
+        transform: scale(1.25);
+    }
+    100%{
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+@keyframes desplazar-hacia-derecha {
+    from {
+        width: 0%;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes reveal {
+    0% {
+        transform: scaleX(0);
+    }
+    100%{
+        transform: scaleX(1);
+    }
+}
+
+/* MEDIAAAAAAAAAAAAAAAAAAQUEEEEEEEEERIIIIIIIIIIEEEEEEEEEEEEEEEEESSSSS*/
+
+@media (max-width: 953px) {
+    #welcome-section {
+        width: 100%;
+        height: 900px;
+        background-color: #171717;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='199' viewBox='0 0 100 199'%3E%3Cg fill='%23979797' fill-opacity='0.02'%3E%3Cpath d='M0 199V0h1v1.99L100 199h-1.12L1 4.22V199H0zM100 2h-.12l-1-2H100v2z'%3E%3C/path%3E%3C/g%3E%3C/svg%3E");
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .texto-principal-profesion{
+        text-align: center;
+        overflow-x: hidden;
+        overflow-y: hidden;
+        user-select: none;
+    }
+    
+    .frontend-text {
+        animation-name: desplazamiento-frontend;
+        animation-duration: 6s;
+        animation-fill-mode: forwards;
+    }
+    
+    .developer-text {
+        animation-name: desplazamiento-developer;
+        animation-duration: 6s;
+        animation-fill-mode: forwards;
+    }
+    
+    .box .content {
+        margin-top: 30px;
+        opacity: 1;
+        width: 300px;
+        height: 300px;
+        /*transform: scaleX(0);*/
+        transform-origin: left;
+        animation: reveal 1s ease-in-out forwards;
+    }
+
+    .front-end-developer-text {
+        font-size: 15vw;
+        font-family: 'Abril Fatface', sans-serif;
+        color: rgb(151, 151, 151);
+        transition: 0.5s;    /* ----------->Esto es para ser mas visible el diseño responsivo */
+    }
+    
+    .front-end-developer-text:hover {
+        font-size: 15vw;
+        color: white;
+        transition: 1s;
+        cursor: default;
+    }
+    
+    .texto-principal-presentacion {
+        display: none;
+        justify-content: center;
+        align-items: center;
+        text-align: center;        
+        max-width: 100%;
+        height: 500px;
+        font-family: Poppins, sans-serif;
+        transition: 0.5s;
+    }
+    
+    .tppFlex {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    
+    .tppFotoFlex {
+        width: 95%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    
+    .nombreText {
+        color: rgb(214, 214, 214);
+        font-size: 6vw;
+        animation: blow-presentacion 1s;
+        transition: 0.5s;
+        text-shadow: -1px 0 black, 0 5px black, 1px 0 black, 0 -1px black;
+    }
+    
+    .profesionText {
+        color: #ffc4009f;;
+        font-weight: 100;
+        font-size: 1.5em;
+        animation: reveal ease-in-out forwards;
+    }
+    
+    .descripcionText {
+        color: rgb(214, 214, 214);
+        font-size: 1em;
+        max-width: 70%;
+        text-align: justify;
+        animation: blow-presentacion 1s 1s both;
+    }
+}
+  
+
+  

@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Anton&family=Caveat&family=Fredoka+One&family=Gelasio:wght@500&family=League+Spartan:wght@500&family=Nunito:ital,wght@0,200;1,400&family=Poppins:wght@500&family=Roboto:wght@500&family=Saira+Condensed&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html { 
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #171717;
+    overflow: hidden;
+}
+
+#bodyId::-webkit-scrollbar {
+    width: 8px;
+    background-color: #171717;
+    
+}
+
+#bodyId::-webkit-scrollbar-thumb {
+    background: rgb(80, 80, 80);
+    border-radius: 7px;
+    border: 1px solid #181818;
+}
