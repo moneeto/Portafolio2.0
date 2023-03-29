@@ -12,7 +12,7 @@ export const ProjectsSection = () => {
             <h1 className="projects-container-title">My Projects</h1>
             <div className="projectFlex">
                 <Project
-                    url='https://moneeto.github.io/TODO-list.github.io/'
+                    url='https://moneeto-todo-list.vercel.app/'
                     image={require('../../media/task-manager.png')}
                     imageAlt='Task Manager image'
                     title='Task Manager'
