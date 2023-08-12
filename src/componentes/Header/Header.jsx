@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import './Header.scss' 
 
 
@@ -37,7 +37,7 @@ const Header = () => {
                 </a>
             </div>
             <li className="nav-link hvr-underline-from-center"><a href="#welcome-section">About me</a></li>
-            <li className="nav-link hvr-underline-from-center"><a href="#skills-section">Skills</a></li>
+            <li className="nav-link hvr-underline-from-center"><a href="#skills-section">Tools</a></li>
             <li className="nav-link hvr-underline-from-center"><a href="#projects-section">My Projects</a></li>
             <li className="nav-link hvr-underline-from-center"><a href="#contact-section">Contact</a></li>
           </ul>  

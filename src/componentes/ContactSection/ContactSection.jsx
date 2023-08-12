@@ -1,13 +1,15 @@
 import React, {useRef, useState} from "react";
 import emailjs from '@emailjs/browser';
 import '../ContactSection/ContactSection.scss'
+import Modal from 'react-modal'
 
 export const ContactSection = () => {
     const form = useRef();
     const [exito, setExito] = useState('Send') ;
     const [enviado, setEnviado] = useState(false);
     const [loading, setLoading] = useState(false);
-    
+    const [modalIsOpen, setModalIsOpen] = useState(false)
+    const [message, setMessage] = useState('')
     
     const sendEmail = (e) => {
     e.preventDefault();
@@ -15,10 +17,13 @@ export const ContactSection = () => {
         alert('Ya enviaste un formulario!')
     } else {
         setLoading(true)
+        openModal()
+        setMessage('Sending message...')
         emailjs.sendForm('service_pxz4njm', 'template_8auohjq', form.current, 'NKn4f_Ct_PbqOrqSy')
           .then((result) => {
               console.log(result.text);
               setExito('Form sent!');
+              setMessage('The message was successfully sent!')
               setLoading(false)
               setEnviado(true);
           }, (error) => {
@@ -28,14 +33,41 @@ export const ContactSection = () => {
     }
   };
 
+  const openModal = () => {
+    setModalIsOpen(true);
+  }
 
+  const closeModal = () => {
+    setModalIsOpen(false)
+  }
 
+  const customStyles = {
+    content: {
+        top: '50%',
+        left: '50%',
+        right: 'auto',
+        bottom: 'auto',
+        marginRight: '-50%',
+        transform: 'translate(-50%, -50%)',
+        color: 'red'
+      },
+  }
 
   return (
     <section id="contact-section">
+        <Modal
+        isOpen={modalIsOpen}
+        onRequestClose={closeModal}
+        style={customStyles}
+        contentLabel="Example Modal"
+      >
+        <h2>Contact</h2>
+        <p>{message}</p>
+        {loading ? null : <button onClick={closeModal}>Finish</button>}
+      </Modal>
         <div className="form-title">
             <h1 className="form-title-text">LET ME <span style={{color: "#ddb226"}}>HELP</span> YOU!</h1>
-            <h2 className="form-title-subtext">{loading ? "Sending message..." : "Get in touch:"}</h2>
+            <h2 className="form-title-subtext">Get in touch:</h2>
         </div>
     <div className="form-div">
         <div className="head-form">

@@ -12,13 +12,12 @@ export const SkillSection = () => {
         MostrarSkills()
     }
 
-    return(
+    return (
         <section id="skills-section">
         <div className="skills-container reveal">
-            <h1 className="skills-container-title">Skills</h1>
+            <h1 className="skills-container-title">Tools</h1>
         </div>
-        <p className={showTools ? "skills-container-p invisible" : "skills-container-p" }>My main tools that I use to work in my projects</p>
-        
+        <p className={showTools ? "skills-container-p invisible" : "skills-container-p" }>Biggest part of projects that I work are implemented with:</p>
         {showTools ? <Skills /> : null}
         <div className="skill-button-div">
             <button className="skill-button hvr-shutter-in-horizontal" id="buttonSkill" onClick={onClick}>Show tools!</button>

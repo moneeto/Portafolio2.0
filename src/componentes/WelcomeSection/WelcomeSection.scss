@@ -54,6 +54,17 @@
     transition: 0.5s;
 }
 
+.w-link {
+    text-decoration: underline;
+    transition: 0.2s;
+
+    &:hover {
+        color: #60e5b6ea;;
+        transition: 0.2s;
+    }
+
+} 
+
 .tppFlex {
     display: flex;
     align-items: center;
