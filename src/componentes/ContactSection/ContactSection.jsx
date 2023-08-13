@@ -5,7 +5,6 @@ import Modal from 'react-modal'
 
 export const ContactSection = () => {
     const form = useRef();
-    const [exito, setExito] = useState('Send') ;
     const [enviado, setEnviado] = useState(false);
     const [loading, setLoading] = useState(false);
     const [modalIsOpen, setModalIsOpen] = useState(false)
@@ -13,8 +12,9 @@ export const ContactSection = () => {
     
     const sendEmail = (e) => {
     e.preventDefault();
-    if(enviado){ 
-        alert('Ya enviaste un formulario!')
+    if(enviado){
+        setMessage('You have already sent a message.')
+        openModal()
     } else {
         setLoading(true)
         openModal()
@@ -22,13 +22,13 @@ export const ContactSection = () => {
         emailjs.sendForm('service_pxz4njm', 'template_8auohjq', form.current, 'NKn4f_Ct_PbqOrqSy')
           .then((result) => {
               console.log(result.text);
-              setExito('Form sent!');
               setMessage('The message was successfully sent!')
               setLoading(false)
               setEnviado(true);
           }, (error) => {
               console.log(error.text);
-              setExito('Error.');
+              setMessage('An error has occured.')
+
           });
     }
   };
@@ -43,13 +43,18 @@ export const ContactSection = () => {
 
   const customStyles = {
     content: {
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent:'center',
+        alignItems:'start',
         top: '50%',
         left: '50%',
         right: 'auto',
         bottom: 'auto',
         marginRight: '-50%',
         transform: 'translate(-50%, -50%)',
-        color: 'red'
+        color: '#000',
+        borderRadius: '14px',
       },
   }
 
@@ -61,13 +66,12 @@ export const ContactSection = () => {
         style={customStyles}
         contentLabel="Example Modal"
       >
-        <h2>Contact</h2>
+        <h2><b>CONTACT</b></h2>
         <p>{message}</p>
-        {loading ? null : <button onClick={closeModal}>Finish</button>}
+        {loading ? null : <button className="boton-modal" onClick={closeModal}>Close</button>}
       </Modal>
         <div className="form-title">
             <h1 className="form-title-text">LET ME <span style={{color: "#ddb226"}}>HELP</span> YOU!</h1>
-            <h2 className="form-title-subtext">Get in touch:</h2>
         </div>
     <div className="form-div">
         <div className="head-form">
@@ -76,12 +80,12 @@ export const ContactSection = () => {
                     <input type="text" className="input" id="name" name="user_name" placeholder="Name" required/>
                 </label>
                 <label for="email">
-                    <input type="email" className="input" id="email" name="user_email" placeholder="E-mail address" required />
+                    <input type="email" className="input" id="email" name="user_email" placeholder="E-mail" required />
                 </label>
                 <label for="textarea">
-                    <textarea className="input" placeholder="Write your message here!" id="textarea" name="message" required></textarea>
+                    <textarea className="input" placeholder="Write your message here..." id="textarea" name="message" required></textarea>
                 </label>
-                <button className="submit-button input hvr-shutter-in-horizontal" style={enviado ? {backgroundColor: "green"} : null} type="submit" value="Send">{exito}</button>
+                <button className="submit-button input hvr-shutter-in-horizontal" style={enviado ? {backgroundColor: "green"} : null} type="submit" value="Send">{!message ? "Send" : message}</button>
             </form>
 
         </div>

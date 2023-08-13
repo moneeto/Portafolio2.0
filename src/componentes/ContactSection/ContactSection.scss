@@ -119,6 +119,20 @@ textarea {
     resize: none;
 }
 
+.boton-modal {
+    border-radius: 14px;
+    padding: 5px;
+    background: #bccbbb;
+    border: 1px solid grey;
+    width: 30%;
+
+    &:hover {
+        background-color: #666f68;
+        color: white;
+    }
+}
+
+
 
 .scale-in-ver-center {
 	-webkit-animation: scale-in-ver-center 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
