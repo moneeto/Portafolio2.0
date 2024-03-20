@@ -36,7 +36,7 @@ export const WelcomeSection = () => {
                     </div>
                     <div id="box" className="box">
                         <div id="content" className="content">
-                            <img src={require('../../media/ppinsta.jpg')} alt="Joaquin Palmeyro" />
+                            <img src={require('../../media/fotoperfilportafolio.jpg')} alt="Joaquin Palmeyro" />
                         </div>
                     </div>
                 </div>
