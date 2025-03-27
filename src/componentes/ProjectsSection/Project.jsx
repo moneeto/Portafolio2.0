@@ -2,7 +2,6 @@ import React from "react";
 import './Project.scss'
 
 export const Project = (props) => {
-
     return(
         <a href={props.url} rel="noreferrer" target="_blank">    
                     <div className="project-card">

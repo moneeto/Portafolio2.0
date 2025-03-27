@@ -28,11 +28,8 @@ export const WelcomeSection = () => {
                             </div>
                         </div>
                         <br />
-                        <p className="descripcionText"><b>React</b> + <b>Node</b> developer currently working at <a className="w-link" target="_blank" href="https://www.itport.com.ar/ " rel="noreferrer">ITPort - Weeot.</a>
-                            <br />
-                            I was in government projects such as Juegos Evita, a national level tournament of different events and their respective disciplines.</p>
-                        <br />
-                        <a href={require('../../media/cv.pdf')} target="_blank"><button className="btn-cv">View CV</button></a>
+                        <p className="descripcionText">System Analyst & Developer with experience in building MVC platforms, integrating APIs, implementing authentication, and handling file processing with data operations. Contributed to projects such as Boletas, Padrón Social, and UOM's Digital Credential.</p>
+                        <a style={{marginTop:"30px"}} href={require('../../media/cv.pdf')} target="_blank"><button className="btn-cv">View CV</button></a>
                     </div>
                     <div id="box" className="box">
                         <div id="content" className="content">

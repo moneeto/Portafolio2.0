@@ -12,11 +12,10 @@ export const ProjectsSection = () => {
             <h1 className="projects-container-title">My Projects</h1>
             <div className="projectFlex">
                 <Project
-                    url='https://jevita-hom.yvera.gob.ar/'
-                    image={require('../../media/jevita.png')}
-                    imageAlt='Juegos Evita 2023 image'
-                    title='Juegos Evita'
-                    paragraph='The admin platform of Juegos Evita 2023 edition, using React and Node.js (https) ' />
+                    image={require('../../media/patita.png')}
+                    imageAlt='Feeded image'
+                    title='Feeded!'
+                    paragraph='IN PROGRESS: MVC Platform to keep record of the diet of your pets, check historic results and view reports of alimentation. ' />
                 <Project
                     url='https://moneeto-todo-list.vercel.app/'
                     image={require('../../media/task-manager.png')}
@@ -28,9 +27,8 @@ export const ProjectsSection = () => {
                     image={require('../../media/ferrari-landing-page.png')}
                     imageAlt='Ferrari F58 Image'
                     title='Ferrari Landing Page'
-                    paragraph='Landing page where I use HTML, CSS and JavaScript' />
+                    paragraph='Landing page created with HTML, CSS and JavaScript' />
 
-                
             </div>
         </div>
     </section>
